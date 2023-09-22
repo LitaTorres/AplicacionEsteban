@@ -17,6 +17,11 @@
   </div>
 
   <div>
+    <%= form.label :publication_id, style: "display: block" %>
+    <%= form.select :publication_id, Publication.all.collect {|c| [c.title, c.id]} %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
