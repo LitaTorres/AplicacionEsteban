@@ -72,7 +72,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_22_052830) do
     t.string "name"
     t.string "photo"
     t.string "description"
-    t.integer "role"
+    t.integer "role", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

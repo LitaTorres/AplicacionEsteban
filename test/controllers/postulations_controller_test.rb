@@ -1,6 +1,8 @@
 require "test_helper"
 
 class PostulationsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     @postulation = postulations(:one)
   end
@@ -8,6 +10,10 @@ class PostulationsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get postulations_url
     assert_response :success
+    assert_equal 200, response.status
+    assert_equal "text/html", responde.media_type
+    assert_equal "utf-8", response.chatset
+    assert_equal Postulation.count, 2
   end
 
   test "should get new" do

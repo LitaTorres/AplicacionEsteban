@@ -5,14 +5,13 @@
 <div>
   <% if user_signed_in? %>
 
-    <% if current_user.id == @publication.user_id %>
-      <%= link_to "Edit this publication", edit_publication_path(@publication) %> |
-      <%= button_to "Destroy this publication", @publication, method: :delete %>
-    <% end %>
-
+  <% if current_user.id == @publication.user_id %> <br> <br>
+  <%= link_to "Editar esta pubicación", edit_publication_path(@publication) , class:"btn btn-warning" %> <br> <br>
+  <%= button_to "Eliminar esta publicación", @publication, method: :delete , class:"btn btn-warning" %>
   <% end %>
 
-  <%= link_to "Back to publications", publications_path %>
+  <% end %> <br>
 
-  <%= link_to "Ir a postulaciones", new_postulation_path %>
+  <%= link_to "Volver a las publicaciones", publications_path, class:"btn btn-dark" %> <br> <br>
+  <%= link_to "Ir a postulaciones", new_postulation_path, class:"btn btn-dark" %>
 </div>

@@ -12,12 +12,12 @@
   <% end %>
 
   <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.label :title, "Título", class: "label-dark", style: "display: block" %>
+    <%= form.text_field :title %> <br>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label :description, "Descripción", class: "label-dark", style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
@@ -30,9 +30,7 @@
     <%= form.file_field :images, multiple: true, style: "width: 200px; height: 200px;" %>
   </div>
 
-
-
   <div>
-    <%= form.submit %>
+    <%= form.submit "Actualizar Publicación", class: "btn btn-warning" %> <br> <br>
   </div>
 <% end %>

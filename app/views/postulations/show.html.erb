@@ -3,8 +3,9 @@
 <%= render @postulation %>
 
 <div>
-  <%= link_to "Edit this postulation", edit_postulation_path(@postulation) %> |
-  <%= link_to "Back to postulations", postulations_path %>
+  
+  <%= link_to "Editar esta pubicación", edit_postulation_path(@postulation) , class:"btn btn-warning" %> <br> <br>
+  <%= button_to "Eliminar esta publicación", @postulation, method: :delete , class:"btn btn-warning" %>
+  <%= link_to "Volver a las publicaciones", postulations_path, class:"btn btn-dark" %> <br> <br>
 
-  <%= button_to "Destroy this postulation", @postulation, method: :delete %>
 </div>

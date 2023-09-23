@@ -12,12 +12,12 @@
   <% end %>
 
   <div>
-    <%= form.label :publication_id, style: "display: block" %>
-    <%= form.text_field :publication_id %>
+
+    <%= form.hidden_field :publication_id, value: current_user.id %>
   </div>
 
   <div>
-    <%= form.label :publication_id, style: "display: block" %>
+    <%= form.label :publication_id, style: "display: block"  %>
     <%= form.select :publication_id, Publication.all.collect {|c| [c.title, c.id]} %>
   </div>
 
