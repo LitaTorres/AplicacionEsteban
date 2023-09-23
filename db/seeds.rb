@@ -7,5 +7,5 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-User.create!(email: "admin@gmail.com", name: "Esteban", password: "112233", role: 1, photo: File.open(Rails.root.join('app', 'assets', 'images', '1a.jpg'))) #asi es con la semillaaaaaaa
-User.create!(email: "usuarionormal@gmail.com", name: "Usuario1", password: "112233", role: 0,  photo: File.open(Rails.root.join('app', 'assets', 'images', '2u.jpg'))) #asi es con la semillaaaaaaa
+User.create!(email: "admin@gmail.com", name: "Esteban", password: "112233", role: 1) #asi es con la semillaaaaaaa
+User.create!(email: "usuarionormal@gmail.com", name: "Usuario1", password: "112233", role: 0) #asi es con la semillaaaaaaa
